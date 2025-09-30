@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ไปต่อ</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 80px; }
+    button {
+      font-size: 20px; padding: 14px 28px;
+      border: none; border-radius: 8px;
+      background: #2563eb; color: #fff; cursor: pointer;
+    }
+    button:hover { background: #1e40af; }
+  </style>
+</head>
+<body>
+  <h2>กดปุ่มเพื่อไปต่อ</h2>
+  <button onclick="go()">คลิกเพื่อไปต่อ</button>
+
+  <script>
+    function go(){
+      var shopee = "https://s.shopee.co.th/1LWm2PezKj";
+      var target = "https://www.facebook.com/pragunwaangai/posts/hair-cut-30-%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%82%E0%B8%AD%E0%B8%A5%E0%B8%94%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B0%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B8%B3%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B9%84%E0%B8%A7%E0%B8%87-%E0%B8%81%E0%B8%9B%E0%B8%A7-%E0%B8%84%E0%B8%9B%E0%B8%A0/1067551525387067/";
+      window.open(shopee, "_blank", "noopener");
+      setTimeout(function(){ window.location.href = target; }, 1500);
+    }
+  </script>
+</body>
+</html>
