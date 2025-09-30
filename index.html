@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>กำลังพาไปต่อ...</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; margin: 0; padding: 0; background: #fafafa; }
+    .wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+    .card { max-width: 720px; width: 100%; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.06); }
+    h1 { margin: 0 0 8px; font-size: 1.5rem; }
+    p { margin: 0 0 14px; line-height: 1.65; }
+    .btn { display: inline-block; padding: 12px 18px; border-radius: 8px; text-decoration: none; border: 1px solid #111827; }
+    .btn + .btn { margin-left: 10px; }
+    .muted { color: #6b7280; font-size: .95rem; }
+    .code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 6px; padding: 10px 12px; display: block; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>กำลังพาไป Shopee เพื่อบันทึก affiliate แล้วจะส่งต่อไป Facebook</h1>
+      <p class="muted">ขั้นตอนนี้จะเปิดแท็บ Shopee ขึ้นมา (เพื่อวางคุกกี้) จากนั้นแท็บนี้จะพาคุณไปยังโพสต์ Facebook อัตโนมัติ</p>
+
+      <p><strong>คลิกปุ่มด้านล่างเพื่อไปต่อ</strong></p>
+      <p>
+        <a id="go" class="btn" href="#" rel="nofollow">คลิกเพื่อไปต่อ</a>
+        <a class="btn" id="fb-fallback" href="https://www.facebook.com/pragunwaangai/posts/hair-cut-30-%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%82%E0%B8%AD%E0%B8%A5%E0%B8%94%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B0%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B8%B3%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B9%84%E0%B8%A7%E0%B8%87-%E0%B8%81%E0%B8%9B%E0%B8%A7-%E0%B8%84%E0%B8%9B%E0%B8%A0/1067551525387067/" target="_self" rel="noopener">ไป Facebook เลย</a>
+      </p>
+
+      <p class="muted">ถ้าบราวเซอร์บล็อกป็อปอัป ให้อนุญาตชั่วคราว หรือกดปุ่มอีกครั้ง</p>
+
+      <details style="margin-top:16px;">
+        <summary>ดูว่าเราทำอะไรอยู่?</summary>
+        <p class="muted">เมื่อคุณคลิก เราจะเปิดลิงก์ Shopee ในแท็บใหม่เพื่อให้ระบบ affiliate ทำงาน จากนั้นหน้านี้จะเด้งไปยัง Facebook อัตโนมัติใน ~1.5 วินาที</p>
+        <pre class="code" aria-label="code sample">window.open("https://s.shopee.co.th/1LWm2PezKj", "_blank", "noopener");
+setTimeout(() =&gt; { window.location.href = "https://www.facebook.com/..."; }, 1500);</pre>
+      </details>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      var shopee = "https://s.shopee.co.th/1LWm2PezKj";
+      var target = "https://www.facebook.com/pragunwaangai/posts/hair-cut-30-%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%84%E0%B8%9B%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A2%E0%B8%B2%E0%B8%81%E0%B8%82%E0%B8%AD%E0%B8%A5%E0%B8%94%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B9%82%E0%B8%94%E0%B8%A2%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%81%E0%B8%B3%E0%B8%AB%E0%B8%99%E0%B8%94%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B0%E0%B9%80%E0%B8%A7%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B8%B3%E0%B8%A3%E0%B8%B0%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%A7%E0%B9%88%E0%B8%B2%E0%B9%84%E0%B8%A7%E0%B8%87-%E0%B8%81%E0%B8%9B%E0%B8%A7-%E0%B8%84%E0%B8%9B%E0%B8%A0/1067551525387067/";
+      function go(){
+        try {
+          // open Shopee in a new tab to drop cookie
+          var w = window.open(shopee, "_blank", "noopener");
+        } catch(e) {}
+        // redirect current tab to Facebook after a short delay
+        setTimeout(function(){ window.location.href = target; }, 1500);
+      }
+      document.getElementById("go").addEventListener("click", function(ev){
+        ev.preventDefault();
+        go();
+      }, {passive:false});
+    })();
+  </script>
+  <noscript>
+    <div style="max-width:720px;margin:24px auto;padding:12px;border:1px solid #e5e7eb;border-radius:8px;background:#fff;">
+      จำเป็นต้องเปิดใช้งาน JavaScript เพื่อไปต่อได้อย่างถูกต้อง
+    </div>
+  </noscript>
+</body>
+</html>
